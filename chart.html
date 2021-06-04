@@ -1,0 +1,47 @@
+<!--
+  Examples to introduce charting using chart.js
+
+  Author: Manish Agrawal
+
+  Many examples use or are inspired by
+  http://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/
+-->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chart.js examples</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <link rel="stylesheet" type="text/css" href=".\css\chart.css">
+</head>
+<body  bgcolor="#d3d3d3">
+    <h1>National Park Visitors</h1>
+
+    <canvas id="barchartexample" width="300" height="150"></canvas>
+    <script>
+        new Chart(document.getElementById("barchartexample"), {
+            type: 'bar',
+            data: {
+                labels: ["Yellowstone National Park", " Mackinac National Park", "Yosemite National Park", "American Memorial Park", "Alaska Public Lands"],
+                datasets: [
+                    {
+                        label: "Number of Visitors (thousands)",
+                        backgroundColor: ["#3cba9f", "#8e5ea2", "#c45850",  "#e8c3b9", "#3e95cd"],
+                        data: [5000, 3000, 800, 600, 400]
+                    }
+                ]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'National Park Visitors (thousands) in 2020'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
