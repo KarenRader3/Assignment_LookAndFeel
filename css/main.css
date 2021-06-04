@@ -15,56 +15,92 @@ html {
     background-size: cover;
 }
 
-/* Header 1*/
-h1 {
-    position: center;
-    color: black;
-    font-weight: bolder;
-    font-size: 40px;
+@media only screen and (max-width: 600px) {
+    /* For mobile phones*/
+    .leftMenu, .rightMenu, .mainBody {
+        width: 100%;
+    }
 }
 
-/* Header 2*/
-h2 {
-    position: center;
-    color: black;
-    font-weight: bold;
-    font-size: 35px;
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    /* For tablets */
+    .leftMenu, .rightMenu, .mainBody {
+        width: 80%;
+    }
 }
 
-/* Paragraph*/
-p {
-    position: center;
-    color: black;
+@media only screen and (min-width: 912px) {
+    /* For desktops */
+    .leftMenu {
+        width: 26%;
+    }
+
+    .mainBody {
+        width: 50%;
+    }
+
+    .rightMenu {
+        width: 24%
+    }
+}
+
+.leftMenu {
+    float: left;
+    color: #336600;
+    text-align: center;
+}
+
+
+.rightMenu {
+    float: left;
+    color: #336600;
+}
+
+.mainBody {
+    float: left;
+    color: #000000;
+    text-align: center;
+    background-color: #cfc493;
+}
+
+.header {
+    text-align: center;
+    background-color: #336600;
+    color: #100038;
+    padding: 15px;
+}
+
+.rightMenuDecorate {
+    background-color: #336600;
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 40px;
+}
+
+.ThreeColumnBody::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.footer {
+    background-color: #cfc493;
+    color: #336600;
+    text-align: center;
+    font-style: italic;
     font-size: 20px;
+    padding: 15px;
+    border: 2px double green;
+}
+.center {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bold;
 }
 
-/* Position text in the middle */
-.middle {
-  position: center;
-  color: blue;
-  top: 70%;
-  left: 39%;
-  text-align: center;
-  font-size: 25px;
-}
 
-/*Set circle in unordered list*/
-.middle ul {
-  list-style-type: circle;
-}
-
-/*Set text inside li tag to left*/
-.middle ul li {
-  text-align: center !important;
-}
-
-/*Set text color for a tag inside middle class and ul>li element*/
-.middle ul li a {
-  color: blue;
-}
-
-/*Change text color and decoration for a tags inside middle class and ul>li element*/
-.middle ul li a:hover {
-  color: purple;
-  text-decoration: none;
-}
